@@ -8,7 +8,7 @@ require (
 	github.com/jenkins-x/go-scm v1.5.143 // indirect
 	github.com/jenkins-x/jx-helpers v1.0.22
 	github.com/jenkins-x/jx-logging v0.0.10
-	github.com/jenkins-x/jx/v2 v2.1.90
+	github.com/jenkins-x/jx/v2 v2.1.114
 	github.com/mattn/go-colorable v0.1.6 // indirect
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.0.0
