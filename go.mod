@@ -6,7 +6,7 @@ require (
 	github.com/genkiroid/cert v0.0.0-20191007122723-897560fbbe50
 	github.com/jenkins-x/jx-helpers v1.0.36
 	github.com/jenkins-x/jx-logging v0.0.11
-	github.com/jenkins-x/jx/v2 v2.1.130
+	github.com/jenkins-x/jx/v2 v2.1.131
 	github.com/jenkins-x/lighthouse v0.0.710 // indirect
 	github.com/mattn/go-colorable v0.1.6 // indirect
 	github.com/pkg/errors v0.9.1
