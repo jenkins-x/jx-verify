@@ -4,7 +4,7 @@ require (
 	github.com/cenkalti/backoff v2.2.1+incompatible
 	github.com/cpuguy83/go-md2man v1.0.10
 	github.com/genkiroid/cert v0.0.0-20191007122723-897560fbbe50
-	github.com/jenkins-x/jx-api v0.0.17
+	github.com/jenkins-x/jx-api v0.0.24
 	github.com/jenkins-x/jx-helpers v1.0.47
 	github.com/jenkins-x/jx-logging v0.0.11
 	github.com/jenkins-x/jx/v2 v2.1.142
