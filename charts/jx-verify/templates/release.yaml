@@ -1,0 +1,49 @@
+{{- if .Capabilities.APIVersions.Has "jenkins.io/v1/Release" }}
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-02-10T06:24:49Z"
+  deletionTimestamp: null
+  name: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+spec:
+  commits:
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      chore: fix verify job
+
+      so that it properly waits for the job to actually start before tailing the log
+    sha: ec5f9699f12e4958e0728b0d9c728ca7c824156f
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      chore: regen docs
+    sha: 67301ff6137eab8d899747cff932e270afb750a3
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      fix: added verify job step
+    sha: e664c33ea94d538d8c74383c826d5f69fd7a22dd
+  gitHttpUrl: https://github.com/jenkins-x/jx-verify
+  gitOwner: jenkins-x
+  gitRepository: jx-verify
+  name: '{{ .Chart.Name }}'
+  version: 0.0.55
+status: {}
+ 
+{{- end }}
