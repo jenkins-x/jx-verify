@@ -1,0 +1,57 @@
+{{- if .Capabilities.APIVersions.Has "jenkins.io/v1/Release" }}
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-02-15T16:12:51Z"
+  deletionTimestamp: null
+  name: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+spec:
+  commits:
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      chore: regen docs
+    sha: f71dac34c0bcde5de0021c99e2bf6ac8c1433afa
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      chore: lets add a step to verify k8s context
+    sha: f48fa0bdd8157983249b6a45136ebb22cfec63c8
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      chore: regen docs
+    sha: 404972d47e950f3d519477c7aa03298397875e6a
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      chore: wait for at least 2 ready pods before terminating
+    sha: 4bc1945f74a1834f5a40fccce1fa2b7d94343cac
+  gitHttpUrl: https://github.com/jenkins-x/jx-verify
+  gitOwner: jenkins-x
+  gitRepository: jx-verify
+  name: '{{ .Chart.Name }}'
+  version: 0.0.63
+status: {}
+ 
+{{- end }}
