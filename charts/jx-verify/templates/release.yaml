@@ -1,0 +1,48 @@
+{{- if .Capabilities.APIVersions.Has "jenkins.io/v1/Release" }}
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-02-17T11:13:23Z"
+  deletionTimestamp: null
+  name: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+spec:
+  commits:
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      chore: upgrade dependencies
+    sha: dba270333df977967c392195f2fc3d81523ef77a
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      chore: default the domain to the IP address
+
+      if using EKS the external IP is actually a host name rather than an IP
+    sha: d47d671f81b7215734f7eed0c979eab3c3150978
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: noreply@github.com
+      name: GitHub
+    message: 'chore: fix pipeline order'
+    sha: 58f2ee5c17def9cda4a7f5ef98a074cb0786e3e6
+  gitHttpUrl: https://github.com/jenkins-x/jx-verify
+  gitOwner: jenkins-x
+  gitRepository: jx-verify
+  name: '{{ .Chart.Name }}'
+  version: 0.0.65
+status: {}
+ 
+{{- end }}
