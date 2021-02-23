@@ -1,0 +1,73 @@
+{{- if .Capabilities.APIVersions.Has "jenkins.io/v1/Release" }}
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-02-23T09:38:34Z"
+  deletionTimestamp: null
+  name: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+spec:
+  commits:
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      chore: fix selector
+    sha: 7f65f019be81983bee90a878f4d2294a3488c316
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      fix: lets tell kapp not to wait
+
+      for the verify job
+    sha: 259c1d0d529f6ba6a3b5aef99c91c6c0ce1b5cad
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      fix: lets tell kapp not to wait
+
+      for the verify job
+    sha: 50d40628e764ed1d8eb1bacb3221b5a8781a1cb9
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      chore: upgrade deps
+    sha: e6fe9338e4da98800edbd580bf6ecde9cce05b2c
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      fix: lets tell kapp not to wait
+
+      for the verify job
+    sha: 74aa883970964d05545f085f4627339b5f8a2ce3
+  gitHttpUrl: https://github.com/jenkins-x/jx-verify
+  gitOwner: jenkins-x
+  gitRepository: jx-verify
+  name: '{{ .Chart.Name }}'
+  version: 0.0.67
+status: {}
+ 
+{{- end }}
