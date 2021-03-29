@@ -1,0 +1,49 @@
+{{- if and (.Capabilities.APIVersions.Has "jenkins.io/v1/Release") (hasKey .Values.jx "releaseCRD") (.Values.jx.releaseCRD)}}
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-03-29T09:05:09Z"
+  deletionTimestamp: null
+  name: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+spec:
+  commits:
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      chore: fix chart
+    sha: f8e32aed3f04bb8e968033a56551713e074da388
+  - author:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    branch: master
+    committer:
+      email: james.strachan@gmail.com
+      name: James Strachan
+    message: |
+      chore: fix upgrade deps
+    sha: c04466a2d10c181745a84f66772e55b40159aa80
+  - author:
+      email: jenkins-x@googlegroups.com
+      name: jenkins-x-test-bot
+    branch: master
+    committer:
+      email: jenkins-x@googlegroups.com
+      name: jenkins-x-test-bot
+    message: |
+      fix: lets not wait for pods to be ready to verify jobs
+
+      as a pod may never be ready but may be running so lets log earlier
+    sha: b5d13596f1141fac79b18d0e04bf0d5eb20b4a4e
+  gitHttpUrl: https://github.com/jenkins-x/jx-verify
+  gitOwner: jenkins-x
+  gitRepository: jx-verify
+  name: '{{ .Chart.Name }}'
+  version: 0.0.72
+status: {}
+ 
+{{- end }}
