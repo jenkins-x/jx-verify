@@ -1,0 +1,36 @@
+{{- if and (.Capabilities.APIVersions.Has "jenkins.io/v1/Release") (hasKey .Values.jx "releaseCRD") (.Values.jx.releaseCRD)}}
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-04-01T15:03:11Z"
+  deletionTimestamp: null
+  name: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+spec:
+  commits:
+  - author:
+      email: rawlingsj80@gmail.com
+      name: James Rawlings
+    branch: master
+    committer:
+      email: rawlingsj80@gmail.com
+      name: James Rawlings
+    message: |
+      chore: move to plugins org
+    sha: a7007f1cde0427fb53ac14ecd5653f4efe62ab5c
+  - author:
+      email: rawlingsj80@gmail.com
+      name: James Rawlings
+    branch: master
+    committer:
+      email: noreply@github.com
+      name: GitHub
+    message: 'chore: move to plugins org'
+    sha: 573d2f07af81c746649b7c2b4959f32aa2ad3954
+  gitHttpUrl: https://github.com/jenkins-x-plugins/jx-verify
+  gitOwner: jenkins-x-plugins
+  gitRepository: jx-verify
+  name: '{{ .Chart.Name }}'
+  version: 0.0.74
+status: {}
+ 
+{{- end }}
